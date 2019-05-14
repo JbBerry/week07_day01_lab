@@ -48,9 +48,10 @@ class CalcForm extends Component {
     return (
       <>
         <form className="ui inverted segment" onSubmit={this.handleSubmit}>
-          <aria-label for="base-amount">
-            {"Invested Amount"}
+          <label htmlFor="base-amount">
+            Invested amount
             <input
+              aria-label="Invested Amount"
               className="ui inverted input"
               id="base-amount"
               type="number"
@@ -58,11 +59,12 @@ class CalcForm extends Component {
               placeholder="Base amount"
               onChange={this.handleBaseAmountChange}
             />
-          </aria-label>
+          </label>
 
-          <aria-label for="annual-interest">
-            {"Annual Interest"}
+          <label htmlFor="annual-interest">
+            Annual interest
             <input
+              aria-label="Annual Interest"
               className="ui inverted input"
               id="annual-interest"
               type="number"
@@ -70,11 +72,12 @@ class CalcForm extends Component {
               placeholder="Annual interest"
               onChange={this.handleAnnualInterestChange}
             />
-          </aria-label>
+          </label>
 
-          <aria-label for="years">
-            {"Years to grow"}
+          <label htmlFor="years">
+            Years to grow
             <input
+              aria-label="Years to grow"
               className="ui inverted input"
               id="years"
               type="number"
@@ -82,7 +85,7 @@ class CalcForm extends Component {
               placeholder="Years"
               onChange={this.handleYearsChange}
             />
-          </aria-label>
+          </label>
 
           <input type="submit" value="Calculate" />
         </form>
